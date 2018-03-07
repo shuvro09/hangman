@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Fun Hangman Game</title>
+        <link rel="stylesheet" href="hangman.css"
+    </head>
+    <body>
+        <div id='startPage'>
+            <h1>Welcome to Hangman Game</h1>
+            <h3>Click on start to begin!</h3>
+            <button id="start">Start</button>
+        </div>
+        <div id="canvasPage" hidden>
+            <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+            </canvas>
+        </div>
+        <div id='gamePage' hidden>
+            <p><h1>Guess the letters of the word!!</h1></p>
+            
+            <form>
+                <input type="text" id ="answer">
+            </form>
+
+            <table>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                    <td>F</td>
+                    <td>G</td>
+                    <td>H</td>
+                    <td>I</td>
+                    <td>J</td>
+                    <td>K</td>
+                    <td>L</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                        <td>N</td>
+                        <td>O</td>
+                        <td>P</td>
+                        <td>Q</td>
+                        <td>R</td>
+                        <td>S</td>
+                        <td>T</td>
+                        <td>U</td>
+                        <td>V</td>
+                        <td>W</td>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>Z</td>
+                    </tr>
+            </table>
+            <button class="home">Home</button>
+        </div>
+        <div id="gameOver" hidden>
+            <h1>Game Over</h1>
+            
+            <button class="home">Home</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="hangman.js"></script>
+    </body>
+</html>

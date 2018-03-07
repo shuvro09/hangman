@@ -1,0 +1,42 @@
+body{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(95, 51, 66);
+}
+h1{
+    font-size: 75px;
+    color: cornflowerblue;
+    
+}
+h3{
+    margin-top: 20px;
+    font-size: 50px;
+}
+td{
+    width:6px;
+    text-align: center;
+}
+table{
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    padding: 5px;
+}
+
+#start{
+    margin-top: 90px;
+    font-size:30px;
+    margin-bottom: auto;
+}
+.home{
+    margin-top:10px
+}
+#myCanvas{
+    margin-top: 20px;
+    background-color: rgb(95, 71, 92);
+}
+input{
+    background-color: transparent;
+    border:none;
+}
