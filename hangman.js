@@ -9,6 +9,7 @@ let index=0
 let answer=[]
 var words=['STRONG','SWING','FALSE','TREE','SCIENTIST','ABYSS','BAGPIPES','IVY','PNEUMONIA','PUPPY','CAT']
 var arr=[]
+let score=0
 var checkWord
 /*$(document).ready(function(){
     gamePage.hide();
@@ -100,11 +101,11 @@ function showVal(word){
     
 }
 function newgame(){
-    
     startPage.hide();
     gamePage.show();
     canvasPage.show();
-    
+    $("#snackbar").text("lvl"+(index+1));
+    myFunction()
     arr.length=0;
     answer.length=0;
     strike=0
@@ -115,12 +116,18 @@ function newgame(){
     clearCanvas()
     initialDraw()
 }
+
+function myFunction() {
+    var x = document.getElementById("snackbar")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 500);
+}
+
 start.click(newgame)
-
-
 home.click(function(){
     index=0;
-    
+    score=0;
+    $("#update").val(score);
     gameOver.hide();
     canvasPage.hide();
     gamePage.hide();
@@ -131,6 +138,7 @@ function checker(check){
     if(checkWord===check)
         {
             alert("Congrats!You Won.The word was :"+checkWord);
+            
             index++;
             if(index==words.length){
                 alert("You completed the game!!");
@@ -139,8 +147,10 @@ function checker(check){
                 gameOver.show();
             }
             else
-            newgame()
-            
+            {
+                newgame()
+                
+            }
         }
 }
 $("table").find('td').click(function(){
@@ -161,10 +171,23 @@ $("table").find('td').click(function(){
              
         }
         
-        if(flag!==1){strike++;$(this).css("background-color",'red');canvasfill(strike)}
+        if(flag!==1){
+            strike++;$(this).css("background-color",'red');
+            canvasfill(strike);
+            score--;
+            $("#update").val(score)
+        }
+        else{
+            score++;
+            
+            $("#update").val(score)
+        }
         if(strike===6){
             gamePage.hide();
             index=0;
+            let s="Your score :"+score
+            $("#FinalScore").text(s)
+            
             gameOver.show();
             canvasPage.show();
         }
