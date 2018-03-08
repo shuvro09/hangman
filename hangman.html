@@ -9,17 +9,18 @@
             <h3>Click on start to begin!</h3>
             <button id="start">Start</button>
         </div>
-        <div id="canvasPage" hidden>
-            <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
-            </canvas>
-        </div>
+        <div id="snackbar"></div>
         <div id='gamePage' hidden>
             <p><h1>Guess the letters of the word!!</h1></p>
             
-            <form>
-                <input type="text" id ="answer">
+            <form id='score'>
+                <input readonly type="text" value="Score " class="scoreKeeper">
+                <input readonly type="text" value="0" class="scoreKeeper" id="update">
             </form>
 
+            <form>
+                <input readonly type="text" id ="answer">
+            </form>      
             <table>
                 <tr>
                     <td>A</td>
@@ -52,12 +53,18 @@
                         <td>Z</td>
                     </tr>
             </table>
+                
+            
             <button class="home">Home</button>
         </div>
         <div id="gameOver" hidden>
             <h1>Game Over</h1>
-            
+            <h2 id="FinalScore"></h2>
             <button class="home">Home</button>
+        </div>
+        <div id="canvasPage" hidden>
+            <canvas id="myCanvas" width="300" height="300" style="border:1px solid #000000;">
+            </canvas>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="hangman.js"></script>
