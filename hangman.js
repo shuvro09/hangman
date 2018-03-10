@@ -7,7 +7,7 @@ const canvasPage=$("#canvasPage")
 let strike=0
 let index=0
 let answer=[]
-var words=['STRONG','SWING','FALSE','TREE','SCIENTIST','ABYSS','BAGPIPES','IVY','PNEUMONIA','PUPPY','CAT']
+var words=['STRONG','SWING','FALSE','TREE','SCIENTIST','ABYSS','BAGPIPES','IVY','PNEUMONIA','PUPPY','CAT','BLIZZARD','HYPHEN','JINX','MNEMONIC','SCRATCH','VOODOO','WHISKEY','PHLEGM','PEEKABOO','JAZZ','WAVE']
 var arr=[]
 let score=0
 var checkWord
@@ -32,7 +32,7 @@ function initialDraw(){
     ctx.lineTo(50,200);
     ctx.stroke();
     ctx.moveTo(50,50);
-    ctx.lineTo(150,50);
+    ctx.lineTo(121,50);
     ctx.stroke();
     ctx.moveTo(25,200);
     ctx.lineTo(75,200);
@@ -104,7 +104,7 @@ function newgame(){
     startPage.hide();
     gamePage.show();
     canvasPage.show();
-    $("#snackbar").text("lvl"+(index+1));
+    $("#snackbar").text("Lvl "+(index+1));
     myFunction()
     arr.length=0;
     answer.length=0;
